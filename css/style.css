@@ -1,6 +1,8 @@
 h1{font-family: Arial; color:white}
 h1{background-color: darkgray;}
-body{background-color: lightblue;}
+body{background-color: lightblue;
+    --backround-color: white;
+    --text-color: black;}
 header{background-color: lightblue;}
 .header_wrapper{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;}
 .header_nav{display: flex; flex-wrap: wrap;}
@@ -13,3 +15,23 @@ header{background-color: lightblue;}
 .cards{grid-column:span 1; margin-bottom: 10px;}
 .section_menu{display: flex; flex-wrap: wrap;}
 .section_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid;}
+.noselect{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+main{
+    background-color: var(--backround-color);
+    color: var(--text-color);
+}
+:root{
+    --dard-background-color: black;
+    --dark-text-color: white;
+
+}
+body.theme-dark{
+    --backround-color:var(--dard-background-color);
+    --text-color: var(--dark-text-color);
+}
