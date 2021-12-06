@@ -1,0 +1,15 @@
+h1{font-family: Arial; color:white}
+h1{background-color: darkgray;}
+body{background-color: lightblue;}
+header{background-color: lightblue;}
+.header_wrapper{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;}
+.header_nav{display: flex; flex-wrap: wrap;}
+.header_logo{flex-basis: 20%;}
+.header_menu{display: flex; flex-wrap: wrap;}
+.header_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid;}
+.footerw{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;}
+.footer_pic{flex-basis: 20%; margin-right: 30px; border-width: 5px;}
+.htmlcards{display: grid; grid-template-columns: repeat(auto-fill, 30%);}
+.cards{grid-column:span 1; margin-bottom: 10px;}
+.section_menu{display: flex; flex-wrap: wrap;}
+.section_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid;}
