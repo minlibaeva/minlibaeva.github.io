@@ -35,3 +35,9 @@ body.theme-dark{
     --backround-color:var(--dard-background-color);
     --text-color: var(--dark-text-color);
 }
+    prefers-color-scheme: dark{
+    body.theme-auto{
+    —background-color: var(--dark-background-color);
+    —text-color: var(--dark-text-color);
+    }
+    }
