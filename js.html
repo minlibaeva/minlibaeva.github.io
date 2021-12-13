@@ -138,11 +138,29 @@
                 document.querySelector("#theme").addEventListener("change", function(){
                 applyTheme(this.value);
                 });});
+                document.addEventListener("DOMContentLoaded", () => {
+                    const savedTheme = localStorage.getItem("theme") || "auto";
+                    applyTheme(savedTheme);
+                    for (const optionElement of document.querySelectorAll("#theme option")){
+                        optionElement.selected = savedTheme === optionElement.value;
+                    }
+                    document.querySelector("#theme").addEventListener("change", function(){
+                    localStorage.setItem("theme", this.value);
+                    applyTheme (this.value);})
+                })
                 </script>
                 </div>
         </section>
         <section class="main-form">
-            
+            <textarea name="" id="textArea" cols="30" rows="10"></textarea><br>
+            <button></button>
+            <script>
+                document.getElementById("textArea").oninput=function text(){
+                    localStorage.setItem('savetext', document.getElementById("textArea").value);
+                    console.log(localStorage.getItem('savetext'));
+                }
+                document.getElementById("textArea").value = localStorage.getItem('savetext');
+            </script>
         </section>
         <section class="main-form">
             
