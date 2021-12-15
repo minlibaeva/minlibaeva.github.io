@@ -8,13 +8,20 @@ header{background-color: lightblue;}
 .header_nav{display: flex; flex-wrap: wrap;}
 .header_logo{flex-basis: 20%;}
 .header_menu{display: flex; flex-wrap: wrap;}
-.header_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid;}
+.header_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid; border: 0px}
 .footerw{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;}
-.footer_pic{flex-basis: 20%; margin-right: 30px; border-width: 5px;}
+.footer_logo{flex-basis: 20%; margin-right: 30px; border-width: 5px;}
+.footer_text{display: flex; margin-right: 100px;}
 .htmlcards{display: grid; grid-template-columns: repeat(auto-fill, 30%);}
 .cards{grid-column:span 1; margin-bottom: 10px;}
 .section_menu{display: flex; flex-wrap: wrap;}
-.section_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid;}
+.section_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid; border: 0px;}
+table{text-align: center; margin-left: auto; margin-right: auto;}
+hr{border: none; height: 20px; background-color: rgb(77, 194, 233);}
+.img1{display:flex; margin-left: 50px; margin-top: 50px;}
+.img2{display:flex; margin-right: 50px; margin-top: 50px;}
+.p1{display: flex; margin-right: 50px;}
+.p2{display: flex; margin-left: 50px;}
 .noselect{
     -moz-user-select: none;
     -webkit-user-select: none;
