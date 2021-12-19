@@ -13,39 +13,70 @@
             document.getElementById('nootv').checked=true;
         }
     </script>
+    <style>
+        .js_div{display: grid; grid-template-columns: repeat(2, 1fr); justify-content: center; align-items: center;}
+        .main-form{display:flex; flex-wrap: wrap; text-align: center; width: 400px; height: 300px; border: 2px solid #6698d1; grid-column: span 1; margin-top: 10px; margin-bottom: 10px; padding: 20px; align-items: center;}
+        .container{width: 400px;}
+        .container1{width: 300px;}
+        .slaider{width: 300px; height: 200px; overflow: hidden}
+        .slaider-line{width: 1200px; height: 200px; display: flex; position: relative; left: 0;}
+        .mini{width: 300px}
+        .textarea1{resize: none; width: 350px; height: 200px;}
+    </style>
 </head>
 <body class="body1">
     <header>
         <div class="header_wrapper">
-            <div>
-                <h1>Цветы</h1>
-            </div>
                 <div class="header_logo">
-                    <a href = "index.html"><img src="..//images/logotip.png" alt="Логотип" width="300"></a>
+                    <a name=#osebe><a href = "..//index.html#osebe"><img src="..//images/logotip.png" alt="Логотип" width="300"></a></a>
                 </div>
     <nav class="header_nav">
         <ul class="header_menu">
-            <li class="header_items"><a href = "..//index.html#osebe">О себе</a></li>
-            <li class="header_items"><a href = "..//pages/summary.html">Резюме</a></li>
-            <li class="header_items"><a href = "..//pages/portfolio.html">Портфолио</a></li>
-            <li class="header_items"><a href = "..//index.html#komp">Компетенции</a></li>
-            <li class="header_items"><a href = "..//pages/contacts.html">Контакты </a></li>
-            <li class="header_items"><a href = "..//pages/js.html">Задание js</a></li>
-
+            <li class="header_items"><a class="a1" href = "..//index.html#osebe">О себе</a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/summary.html">Резюме</a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/portfolio.html">Портфолио</a></li>
+            <li class="header_items"><a class="a1" href = "..//index.html#komp">Компетенции</a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/contacts.html">Контакты </a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/js.html">Задание js</a></li>
         
         </ul>
     </nav>
     </div>
+    <div class="headers">
+        <div class="h1_headers"><h1>Веб-технологии</h1></div>
+    </div>
     </header>
-
     <main>
-        <div><div>Выберите цветовую тему</div>
-    <select name="" id="theme">
-        <option value="auto">автоматическая</option>
-        <option value="light">светлая</option>
-        <option value="dark">темная</option>
+        <div>Выберете тему:</div>
+                <select name="" id="theme">
+                <option value="auto">по умолчанию</option>
+                <option value="light">светлая</option>
+                <option value="dark">тёмная</option>
+                </select>
+                <script>
+                function applyTheme(theme){
+                document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+                document.body.classList.add(`theme-${theme}`);
+                }
+                document.addEventListener("DOMContentLoaded", ()=>{
+                document.querySelector("#theme").addEventListener("change", function(){
+                applyTheme(this.value);
+                });});
+                document.addEventListener("DOMContentLoaded", () => {
+                    const savedTheme = localStorage.getItem("theme") || "auto";
+                    applyTheme(savedTheme);
+                    for (const optionElement of document.querySelectorAll("#theme option")){
+                        optionElement.selected = savedTheme === optionElement.value;
+                    }
+                    document.querySelector("#theme").addEventListener("change", function(){
+                    localStorage.setItem("theme", this.value);
+                    applyTheme (this.value);})
+                })
+                </script>
+                </div>
     </select>
     </div>
+    <div class="js_div">
         <section class="main-form">
             <form action="" method="get" id="form1" onsubmit="return checkForm(this)">
                 <div class="form-div" id="svaz">
@@ -113,48 +144,26 @@
                     x.style.visibility='hidden';
             }}
         </script>
+
         </section>
         <section class="main-form">
             <div class="noselect">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus explicabo consequatur iste delectus minima, illum quod reprehenderit rerum est numquam. Temporibus illo tenetur cumque at dolorem consequatur quos, quam ullam?
             </div>
             <div>
-                <img src="..//images/1.jpg" alt="">
+                <img src="..//images/1.jpg" alt="1" width="200">
             </div>
         </section>
         <section class="main-form">
-            <div>
-                <div>Выберете тему:</div>
-                <select name="" id="theme">
-                <option value="auto">по умолчанию</option>
-                <option value="light">светлая</option>
-                <option value="dark">тёмная</option>
-                </select>
-                <script>
-                function applyTheme(theme){
-                document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
-                document.body.classList.add(`theme-${theme}`);
-                }
-                document.addEventListener("DOMContentLoaded", ()=>{
-                document.querySelector("#theme").addEventListener("change", function(){
-                applyTheme(this.value);
-                });});
-                document.addEventListener("DOMContentLoaded", () => {
-                    const savedTheme = localStorage.getItem("theme") || "auto";
-                    applyTheme(savedTheme);
-                    for (const optionElement of document.querySelectorAll("#theme option")){
-                        optionElement.selected = savedTheme === optionElement.value;
-                    }
-                    document.querySelector("#theme").addEventListener("change", function(){
-                    localStorage.setItem("theme", this.value);
-                    applyTheme (this.value);})
-                })
-                </script>
-                </div>
+            
+
+
+            
         </section>
+
         <section class="main-form">
-            <textarea name="" id="textArea" cols="30" rows="10"></textarea><br>
-            <button></button>
+            <textarea class="textarea1" name="" id="textArea" cols="30" rows="10"></textarea><br>
+            <button>Button
             <script>
                 document.getElementById("textArea").oninput=function text(){
                     localStorage.setItem('savetext', document.getElementById("textArea").value);
@@ -162,30 +171,76 @@
                 }
                 document.getElementById("textArea").value = localStorage.getItem('savetext');
             </script>
+            </button>
         </section>
+
         <section class="main-form">
-            
+            <div class="container">
+                <div id="big">
+                    <img src="..//images/1.jpg" width='300' alt="" id="bigp" class="bigp">
+                </div>
+                <div id="small">
+                    <img src="..//images/2.jpg" width='100' alt="" class="smallp">
+                    <img src="..//images/3.jpg" width='100' alt="" class="smallp">
+                    <img src="..//images/4.jpg" width='100' alt="" class="smallp">
+                </div>
+                <script>
+                    let el=document.getElementsByClassName("smallp");
+                    console.log(el);
+                    for(i=0;i<el.length;i++){
+                        el[i].onclick=pic;
+                    }
+                    function pic(event){
+                        x=document.getElementById("bigp");
+                        console.log(event.target);
+                        x.src=event.target.src;
+                    }
+                </script>
+            </div>
         </section>
+
         <section class="main-form">
-            
+            <div class="container1">
+                <div class="slaider">
+                    <div class="slaider-line">
+                        <img src="..//images/1.jpg" alt="" class="mini">
+                        <img src="..//images/2.jpg" alt="" class="mini">
+                        <img src="..//images/3.jpg" alt="" class="mini">
+                        <img src="..//images/4.jpg" alt="" class="mini">
+                    </div>
+                </div>
+                <button class="slaider-prev">назад</button>
+                <button class="slaider-next">вперед</button>
+                <script>
+                    let offset=0;
+                    const slaiderline=document.querySelector('.slaider-line');
+                    document.querySelector('.slaider-next').addEventListener('click', function(){
+                        offset=offset+300;
+                        if(offset>900){
+                            offset=0;
+                        }
+                        slaiderline.style.left=-offset+"px";
+                })
+                   document.querySelector('.slaider-prev').addEventListener('click', function(){
+                        offset=offset-300;
+                        if(offset<0){
+                            offset=900;
+                        }
+                        slaiderline.style.left=-offset+"px";
+                })
+                </script>
+            </div>
         </section>
-        <section class="main-form">
-            
-        </section>
-        <section class="main-form">
-            
-        </section>
+    </div>
     </main>
-    </body>
-
-
     <footer>
         <div class="footerw">
             <div class="footer_pic">
-               <a class="footer_logo" href="https://vk.com/unidubna_official" > <i class="fab fa-instagram"></i></a>
-               <a class="footer_logo" href="https://www.instagram.com/unidubna_official/"> <i class="fab fa-vk"></i></a>
-               <a class="footer_logo" href="https://www.youtube.com/c/ТВГУД"> <i class="fab fa-youtube"></i></a>
+                <a class="footer_logo" href="https://www.instagram.com/official_msu/"><img src="..//images/unst.png" width="30px"></a>
+                <a class="footer_logo" href="https://twitter.com/msu_ru"><img src="..//images/twit.png" width="30px"></a>
+                <a class="footer_logo" href="https://vk.com/msu_official"><img src="..//images/vk.png" width="30px"></a>
         </div>
         <DIV class="footer_text">Сайт разработан ФИ, Copyright © 2021</DIV>
        </div>
         </footer>
+    </body>

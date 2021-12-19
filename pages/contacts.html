@@ -7,40 +7,67 @@
     <title>Document</title>
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> 
     <link rel="stylesheet" href="..//css/style.css"> 
+    <style>
+        .contact{
+            background-color: aliceblue;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    border: 2px solid hsl(212, 54%, 61%);
+    padding-top: 50px;
+    grid-column: span 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-width: 10px;
+        }
+    .pic_seti{display: grid; grid-template-columns: repeat(3,1fr); justify-items: center;}
+    .d_contact{display: grid; grid-template-columns: repeat(3,1fr); justify-content: center; align-items: center;}
+    </style>
 </head>
 <body>
     <header>
         <div class="header_wrapper">
-            <div>
-                <h1>Цветы</h1>
-            </div>
                 <div class="header_logo">
-                    <a href = "index.html"><img src="..//images/logotip.png" alt="Логотип" width="300"></a>
+                    <a name=#osebe><a href = "..//index.html#osebe"><img src="..//images/logotip.png" alt="Логотип" width="300"></a></a>
                 </div>
     <nav class="header_nav">
         <ul class="header_menu">
-            <li class="header_items"><a href = "..//index.html#osebe">О себе</a></li>
-            <li class="header_items"><a href = "..//pages/summary.html">Резюме</a></li>
-            <li class="header_items"><a href = "..//pages/portfolio.html">Портфолио</a></li>
-            <li class="header_items"><a href = "..//index.html#komp">Компетенции</a></li>
-            <li class="header_items"><a href = "..//pages/contacts.html">Контакты </a></li>
-            <li class="header_items"><a href = "..//pages/js.html">Задание js</a></li>
-
+            <li class="header_items"><a class="a1" href = "..//index.html#osebe">О себе</a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/summary.html">Резюме</a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/portfolio.html">Портфолио</a></li>
+            <li class="header_items"><a class="a1" href = "..//index.html#komp">Компетенции</a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/contacts.html">Контакты </a></li>
+            <li class="header_items"><a class="a1" href = "..//pages/js.html">Задание js</a></li>
         
         </ul>
     </nav>
     </div>
+    <div class="headers">
+        <h1 class="h1_headers">Веб-технологии</h1>
+    </div>
     </header>
-    <main></main>
-    <footer>
-        <div class="footerw">
-            <div class="footer_pic">
-               <a class="footer_logo" href="https://vk.com/unidubna_official" > <i class="fab fa-instagram"></i></a>
-               <a class="footer_logo" href="https://www.instagram.com/unidubna_official/"> <i class="fab fa-vk"></i></a>
-               <a class="footer_logo" href="https://www.youtube.com/c/ТВГУД"> <i class="fab fa-youtube"></i></a>
+    <main>
+        <div>
+        <section>
+            <div class="d_contact">
+                <div class="contact">
+                    <h3> Социальные сети: </h3>
+                    <div class="pic_seti">
+                    <a href="https://www.instagram.com/official_msu/"><img src="..//images/unst.png" width="30px"></a>
+                    <a href="https://twitter.com/msu_ru"><img src="..//images/twit.png" width="30px"></a>
+                    <a href="https://vk.com/msu_official"><img src="..//images/vk.png" width="30px"></a>
+                </div>
+                </div>
+
+        <div class="contact">
+            <h3>  Электронная почта: </h3>
+            <div> email@gmail.ru</div>
         </div>
-        <DIV class="footer_text">Сайт разработан ФИ, Copyright © 2021</DIV>
-       </div>
-        </footer>
+
+        <div class="contact">
+            <h3>  Телефон: </h3>
+            <div> 8900*******</div>
+        </div>
+    </main>
 </body>
 </html>

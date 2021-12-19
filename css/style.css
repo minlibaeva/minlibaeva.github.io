@@ -1,23 +1,56 @@
-h1{font-family: Arial; color:white}
-h1{background-color: darkgray;}
-body{background-color: lightblue;
-    --backround-color: white;
-    --text-color: black;}
-header{background-color: lightblue;}
+/* '*' означает, что условия задаются для всего документа. Устанавливаем оступы анизу-вверху нулевые, справа-слева автоматически(т.е. по центру) */
+*{
+    margin: 0 auto;
+}
+
+body{
+    --backround-color: lightblue;
+    --text-color: black; 
+    width: 100%;}
+header{background-color: lightblue; width: 100%;}
+
+h1{font-family: Arial; color:rgb(14, 12, 12);}
+
+.ind{text-align: center}
+
+.headers{text-align: center;
+    width: 100%;
+    font-size: 100%;
+    background: linear-gradient(to left, lightblue,rgb(146, 200, 219), rgb(178, 223, 238), white, white);
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 100px;
+}
+.h1_headers{
+    margin: 0 auto;
+}
 .header_wrapper{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;}
-.header_nav{display: flex; flex-wrap: wrap;}
+.header_nav{display: flex; flex-wrap: wrap; margin-right: 30px;}
 .header_logo{flex-basis: 20%;}
 .header_menu{display: flex; flex-wrap: wrap;}
-.header_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid; border: 0px}
-.footerw{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;}
-.footer_logo{flex-basis: 20%; margin-right: 30px; border-width: 5px;}
+.header_items{margin-right: 30px; border-width: 3px; text-decoration: none; border-left-style: solid; color: #6698d1; list-style-type: none;}
+.a1{text-decoration: none;}
+.footerw{display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background: rgba(36, 172, 172, 0.678); height: 100px;}
+.footer_logo{margin-left: 50px;}
 .footer_text{display: flex; margin-right: 100px;}
+
+section{
+    width: 100%;
+}
+
+.port{text-align: center;}
+.div_p{display: grid; grid-template-columns: repeat(2,1fr); justify-items: center; align-items: center;border-bottom: 50px solid #6698d1;padding: 65px;}
+.port_p{grid-column: span 1; margin-bottom: 20px; margin-top: 20px;}
+
 .htmlcards{display: grid; grid-template-columns: repeat(auto-fill, 30%);}
 .cards{grid-column:span 1; margin-bottom: 10px;}
 .section_menu{display: flex; flex-wrap: wrap;}
 .section_items{margin-right: 30px; border-width: 5px; text-decoration: none; border-left-style: solid; border: 0px;}
 table{text-align: center; margin-left: auto; margin-right: auto;}
-hr{border: none; height: 20px; background-color: rgb(77, 194, 233);}
+.div1{display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; }
 .img1{display:flex; margin-left: 50px; margin-top: 50px;}
 .img2{display:flex; margin-right: 50px; margin-top: 50px;}
 .p1{display: flex; margin-right: 50px;}
@@ -42,9 +75,12 @@ body.theme-dark{
     --backround-color:var(--dard-background-color);
     --text-color: var(--dark-text-color);
 }
-    prefers-color-scheme: dark{
+@media(prefers-color-scheme: dark){
     body.theme-auto{
-    —background-color: var(--dark-background-color);
-    —text-color: var(--dark-text-color);
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
     }
     }
+
+
+    
